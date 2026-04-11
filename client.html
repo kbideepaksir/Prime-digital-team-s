@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Clients | PRIME DIGITAL TEAM</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#050505;
+  color:#fff;
+}
+
+/* HEADER */
+header{
+  padding:15px;
+  text-align:center;
+  background:#000;
+}
+header h1{
+  color:#00bfff;
+}
+
+/* BACK BUTTON */
+.back-btn{
+  display:inline-block;
+  margin-top:10px;
+  text-decoration:none;
+  background:linear-gradient(45deg,#00bfff,#ff6600);
+  padding:10px 20px;
+  border-radius:25px;
+  color:#fff;
+}
+
+/* SECTION */
+section{
+  padding:60px 20px;
+  text-align:center;
+}
+
+h2{
+  font-size:2.5rem;
+  margin-bottom:30px;
+  color:#00bfff;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 0 20px rgba(0,191,255,0.2);
+  transition:0.4s;
+}
+.card:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 30px rgba(255,102,0,0.7);
+}
+
+.card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+  padding:20px;
+  text-align:center;
+  background:#000;
+  margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>PRIME DIGITAL TEAM</h1>
+  <a href="index.html" class="back-btn">⬅ Back to Home</a>
+</header>
+
+<section>
+  <h2>🤝 Our Clients</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="client1.jpg">
+      <h3>CBABIC PURANPUR A.N.</h3>
+      <p>Work: Video Editing</p>
+    </div>
+
+    <div class="card">
+      <img src="client2.jpg">
+      <h3>KB INSTITUTE</h3>
+      <p>Work: Video Editing</p>
+    </div>
+
+    <!-- NEW CLIENT ADD KAR SAKTE HO -->
+    <div class="card">
+      <img src="client3.jpg">
+      <h3>New Client Name</h3>
+      <p>Work: Social Media / Editing</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 PRIME DIGITAL TEAM</p>
+</footer>
+
+</body>
+</html>
