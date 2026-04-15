@@ -33,6 +33,7 @@ nav a{
 .hero{
   padding:80px 20px;
   text-align:center;
+  background:radial-gradient(circle,#001f3f,#000);
 }
 
 .hero h2{
@@ -57,17 +58,13 @@ nav a{
   text-align:center;
 }
 
-/* TEAM PERFECT ALIGN */
+/* TEAM */
 .team-container{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:20px;
   max-width:1000px;
   margin:auto;
-}
-
-.team-card{
-  text-align:center;
 }
 
 .team-img{
@@ -89,6 +86,38 @@ section{padding:60px 20px;text-align:center;}
 .price{color:#ff6600;font-weight:bold;}
 
 footer{text-align:center;padding:20px;background:#000;}
+
+/* WHATSAPP */
+.whatsapp-box{
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  width:250px;
+  background:#111;
+  border-radius:15px;
+  padding:15px;
+  display:none;
+}
+
+.whatsapp-box a{
+  display:block;
+  background:#25D366;
+  padding:10px;
+  border-radius:8px;
+  color:#fff;
+  text-align:center;
+  text-decoration:none;
+}
+
+.whatsapp-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+  cursor:pointer;
+}
 </style>
 </head>
 
@@ -112,10 +141,15 @@ footer{text-align:center;padding:20px;background:#000;}
 <p>Ultra Premium Digital Experience</p>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+<h2>About Us / हमारे बारे में</h2>
+<p>We are a professional digital service provider.</p>
+</section>
+
 <!-- SERVICES -->
 <section id="services">
 <h2>Our Services</h2>
-
 <div class="grid">
 <div class="card">🎬 Short Video Editing</div>
 <div class="card">🎥 Long Video Editing</div>
@@ -127,7 +161,6 @@ footer{text-align:center;padding:20px;background:#000;}
 <!-- PRICING -->
 <section id="pricing">
 <h2>Pricing</h2>
-
 <div class="grid">
 <div class="card">Short Video <p class="price">₹2999</p></div>
 <div class="card">Long Video <p class="price">₹2999</p></div>
@@ -136,28 +169,28 @@ footer{text-align:center;padding:20px;background:#000;}
 </div>
 </section>
 
-<!-- TEAM (PERFECT LINE ALIGN) -->
+<!-- TEAM -->
 <section id="team">
 <h2>Our Team</h2>
 
 <div class="team-container">
 
-<div class="team-card">
+<div>
 <img src="team1.jpg" class="team-img">
 <h4>Deepak (Owner)</h4>
 </div>
 
-<div class="team-card">
+<div>
 <img src="team2.jpg" class="team-img">
 <h4>Shubham</h4>
 </div>
 
-<div class="team-card">
+<div>
 <img src="team3.jpg" class="team-img">
 <h4>Diwakar</h4>
 </div>
 
-<div class="team-card">
+<div>
 <img src="team4.jpg" class="team-img">
 <h4>Angad</h4>
 </div>
@@ -171,12 +204,31 @@ footer{text-align:center;padding:20px;background:#000;}
 <p>📞 +91 8808620032</p>
 </section>
 
+<!-- WHATSAPP -->
+<div class="whatsapp-box" id="chatBox">
+<p>Hi 👋 Need help?</p>
+<a href="https://wa.me/918808620032?text=Hello PRIME DIGITAL TEAM mujhe service chahiye" target="_blank">
+Start Chat
+</a>
+</div>
+
+<div class="whatsapp-btn" onclick="toggleChat()">💬</div>
+
 <footer>
 <p>© 2026 PRIME DIGITAL TEAM</p>
 </footer>
 
 <script>
 ScrollReveal().reveal('.card',{delay:200});
+
+function toggleChat(){
+  const box=document.getElementById('chatBox');
+  box.style.display = box.style.display === 'block' ? 'none' : 'block';
+}
+
+setTimeout(()=>{
+  document.getElementById('chatBox').style.display='block';
+},5000);
 </script>
 
 </body>
